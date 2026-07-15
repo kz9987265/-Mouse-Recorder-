@@ -1,5 +1,5 @@
 """
-第二滑鼠 - 滑鼠/鍵盤動作錄製與執行程式
+滑鼠錄製器 - 滑鼠/鍵盤動作錄製與執行程式
 """
 
 import tkinter as tk
@@ -64,7 +64,7 @@ CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.j
 # ══════════════════════════════════════════════════════════
 LANGS = {
     "繁體中文": {
-        "title":            "第二滑鼠",
+        "title":            "滑鼠錄製器",
         "pin":              "📌 置頂",
         "status_idle":      "待機中",
         "status_recording": "錄製中…",
