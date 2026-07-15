@@ -63,3 +63,73 @@ config.json        # 設定檔（自動建立）
   { "type": "key",   "key": "a", "pressed": true, "delay": 0.08 }
 ]
 ```
+
+# Second Mouse
+A mouse/keyboard macro recorder and auto-playback tool similar to AutoHotkey or Mouse Recorder, built with Python + tkinter. Global hotkeys keep working even when the window is out of focus.
+## ✨ Features
+- **Record** mouse movements, clicks, scroll wheel, and keyboard input
+- **Playback** full reproduction of recorded action sequences
+- **Global hotkeys** for record/pause/play/stop — work even when another window is focused
+- **Rebindable hotkeys** — click any hotkey button to reassign it; press ESC or click elsewhere to cancel
+- **Auto-save** — recordings are automatically saved to the `recordings/` folder on stop, and can be browsed, loaded, or deleted directly within the app
+- **Playback speed** — drag the slider or type a value directly (0.05×–20×)
+- **Loop control** — set a repeat count or loop infinitely, with optional delay between runs
+- **Pause recording** — pause and resume mid-recording without capturing the gap
+- **Always-on-top toggle** — disable it when you need to click through to another window
+- **Persistent settings** — all settings including hotkeys and language are saved on close and restored on next launch
+- **Multi-language UI** — English / 繁體中文 / 简体中文 / 日本語 / 한국어
+
+## 🖥️ Requirements
+
+- Python 3.8+ (tested on Python 3.14)
+- Windows (global hotkeys and mouse control rely on pynput; run as Administrator if hotkeys don't respond)
+
+## 📦 Install Dependencies
+
+```bash
+pip install pynput pyautogui
+```
+
+## 🚀 Run
+
+```bash
+python second_mouse.py
+```
+
+## ⌨️ Default Hotkeys
+
+| Hotkey | Action |
+|--------|--------|
+| F8 | Pause / Resume recording |
+| F9 | Start / Stop recording |
+| F10 | Start playback |
+| F12 | Force stop (recording or playback) |
+
+> All hotkeys can be rebound inside the app
+
+## 📁 File Structure
+
+```
+second_mouse.py    # Main script
+recordings/        # Auto-save folder (created automatically)
+config.json        # Settings file (created automatically)
+```
+
+## 💾 Save Format
+
+Recordings are stored as plain JSON — easy to inspect, edit, or share across machines:
+
+```json
+[
+  { "type": "move",   "x": 512, "y": 300, "delay": 0.05 },
+  { "type": "click",  "x": 512, "y": 300, "btn": "Button.left", "pressed": true,  "delay": 0.1  },
+  { "type": "scroll", "x": 512, "y": 300, "dx": 0, "dy": -3,    "delay": 0.2  },
+  { "type": "key",    "key": "a",          "pressed": true,       "delay": 0.08 }
+]
+```
+## 📄 License
+
+MIT
+
+
+
