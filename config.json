@@ -1,0 +1,17 @@
+{
+  "loop_count": 1,
+  "loop_infinite": true,
+  "play_speed": 4.0,
+  "interval_sec": 300.0,
+  "record_clicks": true,
+  "record_moves": true,
+  "record_scroll": true,
+  "record_keyboard": true,
+  "always_on_top": false,
+  "hotkey_rec": "F9",
+  "hotkey_pause": "F8",
+  "hotkey_play": "F10",
+  "hotkey_stop": "F12",
+  "schedule_hour": "11",
+  "schedule_minute": "05"
+}
