@@ -12,15 +12,52 @@ import threading
 import subprocess
 from datetime import datetime, timedelta
 
-try:
-    from pynput import mouse, keyboard
-    from pynput.mouse import Button, Controller as MouseController
-    import pyautogui
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pynput", "pyautogui"])
-    from pynput import mouse, keyboard
-    from pynput.mouse import Button, Controller as MouseController
-    import pyautogui
+def _ensure_dependencies():
+    """
+    確保 pynput / pyautogui 可用。
+    直接 import 失敗時才嘗試自動安裝；安裝失敗則印出清楚的中文說明並結束，
+    避免使用者看到一堆看不懂的 traceback 或程式閃退。
+    """
+    missing = []
+    for pkg in ("pynput", "pyautogui"):
+        try:
+            __import__(pkg)
+        except ImportError:
+            missing.append(pkg)
+
+    if not missing:
+        return
+
+    print(f"偵測到缺少必要套件：{', '.join(missing)}，嘗試自動安裝中，請稍候…")
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--user", *missing])
+    except Exception as e:
+        print("\n======= 自動安裝套件失敗 =======")
+        print(f"錯誤訊息：{e}")
+        print("\n請手動開啟命令提示字元 / 終端機，輸入以下指令安裝後再執行本程式：")
+        print(f"    {sys.executable} -m pip install {' '.join(missing)}")
+        print("=================================")
+        if sys.stdin and sys.stdin.isatty():
+            input("\n按 Enter 關閉...")
+        sys.exit(1)
+
+    # 安裝後重新嘗試 import，仍失敗就給出明確錯誤而不是讓後面的 import 語句直接炸掉
+    for pkg in missing:
+        try:
+            __import__(pkg)
+        except ImportError as e:
+            print(f"\n安裝後仍無法載入 {pkg}：{e}")
+            print(f"請手動執行：{sys.executable} -m pip install {pkg}")
+            if sys.stdin and sys.stdin.isatty():
+                input("\n按 Enter 關閉...")
+            sys.exit(1)
+
+
+_ensure_dependencies()
+
+from pynput import mouse, keyboard
+from pynput.mouse import Button, Controller as MouseController
+import pyautogui
 
 pyautogui.FAILSAFE = False
 
