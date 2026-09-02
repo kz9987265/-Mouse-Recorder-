@@ -32,11 +32,77 @@ FM = ("Consolas", 9)
 FBT = ("Segoe UI", 10, "bold")
 FS = ("Segoe UI", 9)
 
+LANGUAGES = {
+    "繁體中文": {
+        "第二滑鼠": "第二滑鼠", "置頂": "置頂", "待機中": "待機中", "語系": "語系",
+        "開始錄製": "開始錄製", "執行": "執行", "錄製": "錄製", "暫停錄製": "暫停錄製",
+        "停止": "停止", "點擊按鍵可重新設定熱鍵": "點擊按鍵可重新設定熱鍵",
+        "錄製設定": "錄製設定", "滑鼠點擊": "滑鼠點擊", "滑鼠移動": "滑鼠移動",
+        "滾輪捲動": "滾輪捲動", "鍵盤輸入": "鍵盤輸入", "播放設定": "播放設定",
+        "播放速度": "播放速度", "重複次數": "重複次數", "無限循環": "無限循環",
+        "每輪間隔": "每輪間隔", "秒（每次執行完後等待）": "秒（每次執行完後等待）",
+        "定時啟動": "定時啟動", "時間": "時間", "開始排程": "開始排程", "取消排程": "取消排程",
+        "尚未排程": "尚未排程", "存檔記錄": "存檔記錄", "重新整理": "重新整理",
+        "載入選取": "載入選取", "重新命名": "重新命名", "刪除選取": "刪除選取",
+        "已錄製動作（雙擊可編輯）": "已錄製動作（雙擊可編輯）", "編輯腳本": "編輯腳本",
+        "清除": "清除", "匯出": "匯出", "匯入": "匯入", "個動作": "個動作", "個存檔": "個存檔",
+        "按任意鍵…": "按任意鍵…", "執行中…": "執行中…", "執行完畢": "執行完畢",
+        "繼續錄製": "繼續錄製", "停止錄製": "停止錄製", "停止執行": "停止執行",
+    },
+    "English": {
+        "第二滑鼠": "Second Mouse", "置頂": "Always on top", "待機中": "Idle", "語系": "Language",
+        "開始錄製": "Start recording", "執行": "Play", "錄製": "Record", "暫停錄製": "Pause recording",
+        "停止": "Stop", "點擊按鍵可重新設定熱鍵": "Click a key to rebind it",
+        "錄製設定": "Recording settings", "滑鼠點擊": "Mouse clicks", "滑鼠移動": "Mouse movement",
+        "滾輪捲動": "Mouse wheel", "鍵盤輸入": "Keyboard input", "播放設定": "Playback settings",
+        "播放速度": "Playback speed", "重複次數": "Repeat count", "無限循環": "Loop infinitely",
+        "每輪間隔": "Interval", "秒（每次執行完後等待）": "sec (wait after each run)",
+        "定時啟動": "Schedule", "時間": "Time", "開始排程": "Start schedule", "取消排程": "Cancel schedule",
+        "尚未排程": "Not scheduled", "存檔記錄": "Saved recordings", "重新整理": "Refresh",
+        "載入選取": "Load selected", "重新命名": "Rename", "刪除選取": "Delete selected",
+        "已錄製動作（雙擊可編輯）": "Recorded actions (double-click to edit)", "編輯腳本": "Edit script",
+        "清除": "Clear", "匯出": "Export", "匯入": "Import", "個動作": " actions", "個存檔": " recordings",
+        "按任意鍵…": "Press any key...", "執行中…": "Playing...", "執行完畢": "Playback complete",
+        "繼續錄製": "Resume recording", "停止錄製": "Stop recording", "停止執行": "Stop playback",
+    },
+    "简体中文": {
+        "第二滑鼠": "第二鼠标", "置頂": "置顶", "待機中": "待机中", "語系": "语言",
+        "開始錄製": "开始录制", "執行": "执行", "錄製": "录制", "暫停錄製": "暂停录制",
+        "停止": "停止", "點擊按鍵可重新設定熱鍵": "点击按键可重新设置热键",
+        "錄製設定": "录制设置", "滑鼠點擊": "鼠标点击", "滑鼠移動": "鼠标移动", "滾輪捲動": "滚轮滚动", "鍵盤輸入": "键盘输入",
+        "播放設定": "播放设置", "播放速度": "播放速度", "重複次數": "重复次数", "無限循環": "无限循环", "每輪間隔": "每轮间隔", "秒（每次執行完後等待）": "秒（每次执行完后等待）",
+        "定時啟動": "定时启动", "時間": "时间", "開始排程": "开始计划", "取消排程": "取消计划", "尚未排程": "尚未计划", "存檔記錄": "存档记录", "重新整理": "刷新", "載入選取": "加载选中", "重新命名": "重命名", "刪除選取": "删除选中",
+        "已錄製動作（雙擊可編輯）": "已录制动作（双击可编辑）", "編輯腳本": "编辑脚本", "清除": "清除", "匯出": "导出", "匯入": "导入", "個動作": "个动作", "個存檔": "个存档",
+        "按任意鍵…": "按任意键...", "執行中…": "执行中...", "執行完畢": "执行完毕", "繼續錄製": "继续录制", "停止錄製": "停止录制", "停止執行": "停止执行",
+    },
+    "日本語": {
+        "第二滑鼠": "セカンドマウス", "置頂": "最前面に表示", "待機中": "待機中", "語系": "言語", "開始錄製": "録画開始", "執行": "実行", "錄製": "録画", "暫停錄製": "録画一時停止", "停止": "停止", "點擊按鍵可重新設定熱鍵": "キーをクリックして変更",
+        "錄製設定": "録画設定", "滑鼠點擊": "マウスクリック", "滑鼠移動": "マウス移動", "滾輪捲動": "ホイール", "鍵盤輸入": "キーボード入力", "播放設定": "再生設定", "播放速度": "再生速度", "重複次數": "繰り返し回数", "無限循環": "無限ループ", "每輪間隔": "間隔", "秒（每次執行完後等待）": "秒（実行後の待機）",
+        "定時啟動": "スケジュール", "時間": "時刻", "開始排程": "開始", "取消排程": "キャンセル", "尚未排程": "未設定", "存檔記錄": "保存記録", "重新整理": "更新", "載入選取": "選択を読み込む", "重新命名": "名前変更", "刪除選取": "選択を削除", "已錄製動作（雙擊可編輯）": "録画した操作（ダブルクリックで編集）", "編輯腳本": "スクリプト編集", "清除": "クリア", "匯出": "エクスポート", "匯入": "インポート", "個動作": " 操作", "個存檔": " 保存",
+        "按任意鍵…": "任意のキーを押す...", "執行中…": "実行中...", "執行完畢": "完了", "繼續錄製": "録画を再開", "停止錄製": "録画を停止", "停止執行": "実行を停止",
+    },
+    "한국어": {
+        "第二滑鼠": "세컨드 마우스", "置頂": "항상 위", "待機中": "대기 중", "語系": "언어", "開始錄製": "녹화 시작", "執行": "실행", "錄製": "녹화", "暫停錄製": "녹화 일시정지", "停止": "중지", "點擊按鍵可重新設定熱鍵": "키를 클릭하여 단축키 변경",
+        "錄製設定": "녹화 설정", "滑鼠點擊": "마우스 클릭", "滑鼠移動": "마우스 이동", "滾輪捲動": "마우스 휠", "鍵盤輸入": "키보드 입력", "播放設定": "재생 설정", "播放速度": "재생 속도", "重複次數": "반복 횟수", "無限循環": "무한 반복", "每輪間隔": "간격", "秒（每次執行完後等待）": "초 (실행 후 대기)",
+        "定時啟動": "예약 실행", "時間": "시간", "開始排程": "예약 시작", "取消排程": "예약 취소", "尚未排程": "예약되지 않음", "存檔記錄": "저장 기록", "重新整理": "새로 고침", "載入選取": "선택 항목 불러오기", "重新命名": "이름 변경", "刪除選取": "선택 항목 삭제", "已錄製動作（雙擊可編輯）": "녹화된 동작 (더블 클릭하여 편집)", "編輯腳本": "스크립트 편집", "清除": "지우기", "匯出": "내보내기", "匯入": "가져오기", "個動作": "개 동작", "個存檔": "개 저장",
+        "按任意鍵…": "아무 키나 누르세요...", "執行中…": "실행 중...", "執行完畢": "실행 완료", "繼續錄製": "녹화 계속", "停止錄製": "녹화 중지", "停止執行": "실행 중지",
+    },
+}
+
+for _language, _extra in {
+    "繁體中文": {"錄製中…": "錄製中…", "錄製完成（無動作）": "錄製完成（無動作）", "已取消排程": "已取消排程", "啟動失敗": "啟動失敗"},
+    "English": {"錄製中…": "Recording...", "錄製完成（無動作）": "Recording complete (no actions)", "已取消排程": "Schedule cancelled", "啟動失敗": "Failed to start"},
+    "简体中文": {"錄製中…": "录制中...", "錄製完成（無動作）": "录制完成（无动作）", "已取消排程": "已取消计划", "啟動失敗": "启动失败"},
+    "日本語": {"錄製中…": "録画中...", "錄製完成（無動作）": "録画完了（操作なし）", "已取消排程": "スケジュールをキャンセル", "啟動失敗": "起動失敗"},
+    "한국어": {"錄製中…": "녹화 중...", "錄製完成（無動作）": "녹화 완료 (동작 없음)", "已取消排程": "예약 취소됨", "啟動失敗": "시작 실패"},
+}.items():
+    LANGUAGES[_language].update(_extra)
+
 
 class SecondMouse:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("第二滑鼠")
+        self.root.title(self._t("第二滑鼠") if hasattr(self, "language") else "第二滑鼠")
         self.root.geometry("560x960")
         self.root.configure(bg=BG)
         self.root.resizable(False, False)
@@ -70,8 +136,10 @@ class SecondMouse:
         self.schedule_hour   = tk.StringVar(value="09")
         self.schedule_minute = tk.StringVar(value="00")
         self._scheduled_save_filename = None   # 開始排程當下所選的存檔檔名
+        self.language = "繁體中文"
 
         self._load_config()
+        self.root.title(self._t("第二滑鼠"))
         self._build_ui()
         self._apply_config()
         self._start_hotkey_listener()
@@ -96,6 +164,11 @@ class SecondMouse:
         self.status_dot.pack(side="right", padx=4)
         self.status_lbl = tk.Label(hdr, text="待機中", font=FS, bg=BG, fg=SUBTEXT)
         self.status_lbl.pack(side="right")
+        self.language_btn = tk.Button(hdr, text="語系", font=FS, bg=BORDER, fg=TEXT,
+                          relief="flat", cursor="hand2", padx=7, pady=2,
+                          activebackground=ACCENT, activeforeground=TEXT,
+                          command=self._show_language_menu)
+        self.language_btn.pack(side="right", padx=(0, 8))
 
         # ── 主按鈕 ──
         bf = tk.Frame(self.root, bg=BG)
@@ -287,8 +360,61 @@ class SecondMouse:
             tk.Button(tf, text=t, font=FS, bg=BORDER, fg=TEXT, relief="flat",
                       cursor="hand2", activebackground=ACCENT, activeforeground=TEXT,
                       command=cmd, padx=10, pady=4).pack(side="left", padx=3)
-        self.count_lbl = tk.Label(tf, text="共 0 個動作", font=FS, bg=BG, fg=SUBTEXT)
+        self.count_lbl = tk.Label(tf, text=self._count_text(0), font=FS, bg=BG, fg=SUBTEXT)
         self.count_lbl.pack(side="right")
+        self._translate_widgets()
+
+    def _t(self, text):
+        translations = LANGUAGES.get(self.language, LANGUAGES["繁體中文"])
+        if text in translations:
+            return translations[text]
+        for prefix in ("⏺  ", "▶  ", "⏹  ", "⏱ ", "✕ ", "🔄 ", "📂 ", "✎ ", "🗑 ", "📝 "):
+            if text.startswith(prefix):
+                return prefix + translations.get(text[len(prefix):], text[len(prefix):])
+        return text
+
+    def _count_text(self, count):
+        if self.language == "繁體中文":
+            return f"共 {count} 個動作"
+        return f"{count}{self._t('個動作')}"
+
+    def _save_count_text(self, count):
+        if self.language == "繁體中文":
+            return f"共 {count} 個存檔"
+        return f"{count}{self._t('個存檔')}"
+
+    def _translate_widgets(self):
+        def visit(widget):
+            try:
+                current = widget.cget("text")
+                if current:
+                    widget.config(text=self._t(current))
+            except (tk.TclError, KeyError):
+                pass
+            for child in widget.winfo_children():
+                visit(child)
+        visit(self.root)
+        self.language_btn.config(text=self.language)
+
+    def _show_language_menu(self):
+        menu = tk.Menu(self.root, tearoff=False, bg=SURFACE, fg=TEXT,
+                       activebackground=ACCENT, activeforeground=TEXT)
+        for language in LANGUAGES:
+            menu.add_command(label=language, command=lambda value=language: self._set_language(value))
+        menu.tk_popup(self.language_btn.winfo_rootx(),
+                      self.language_btn.winfo_rooty() + self.language_btn.winfo_height())
+
+    def _set_language(self, language):
+        if language == self.language:
+            return
+        self.language = language
+        for child in self.root.winfo_children():
+            child.destroy()
+        self._build_ui()
+        self._apply_config()
+        self._refresh_save_list()
+        self._refresh_event_list()
+        self.root.title(self._t("第二滑鼠"))
 
     def _apply_config(self):
         if self.always_on_top.get():
@@ -400,7 +526,7 @@ class SecondMouse:
 
         self.events = []
         self.event_list.delete(0, "end")
-        self.count_lbl.config(text="共 0 個動作")
+        self.count_lbl.config(text=self._count_text(0))
         self._set_status("錄製中…", PINK)
         self.rec_btn.config(text="⏹  停止錄製", bg="#c0392b")
         self.play_btn.config(state="disabled")
@@ -414,7 +540,7 @@ class SecondMouse:
         self.events.append(ev)
         self.event_list.insert("end", eng.format_event_label(ev))
         self.event_list.yview("end")
-        self.count_lbl.config(text=f"共 {len(self.events)} 個動作")
+        self.count_lbl.config(text=self._count_text(len(self.events)))
 
     def _stop_record(self):
         self.recorder.stop()
@@ -525,7 +651,7 @@ class SecondMouse:
         self.event_list.delete(0, "end")
         for ev in self.events:
             self.event_list.insert("end", eng.format_event_label(ev))
-        self.count_lbl.config(text=f"共 {len(self.events)} 個動作")
+        self.count_lbl.config(text=self._count_text(len(self.events)))
 
     def _add_new_event(self):
         self._open_event_editor(index=None)
@@ -734,7 +860,7 @@ class SecondMouse:
             return
         path = eng.save_events(self.events)
         self._set_status(f"✅ 已自動存檔：{os.path.basename(path)}", GREEN)
-        self.count_lbl.config(text=f"共 {len(self.events)} 個動作")
+        self.count_lbl.config(text=self._count_text(len(self.events)))
         self._refresh_save_list()
 
     def _refresh_save_list(self):
@@ -748,12 +874,12 @@ class SecondMouse:
                 count = "?"
             try:
                 dt = datetime.strptime(f, "rec_%Y%m%d_%H%M%S.json")
-                label = f"  {dt.strftime('%Y/%m/%d  %H:%M:%S')}    {count} 個動作"
+                label = f"  {dt.strftime('%Y/%m/%d  %H:%M:%S')}    {count}{self._t('個動作')}"
             except Exception:
-                label = f"  {f}   {count} 個動作"
+                label = f"  {f}   {count}{self._t('個動作')}"
             self.save_list.insert("end", label)
         self._files = files
-        self.save_count_lbl.config(text=f"共 {len(files)} 個存檔")
+        self.save_count_lbl.config(text=self._save_count_text(len(files)))
 
     def _load_selected_save(self, event=None):
         sel = self.save_list.curselection()
@@ -820,7 +946,7 @@ class SecondMouse:
     # ════════════════════════════ 工具 ════════════════════════════
 
     def _set_status(self, text, color):
-        self.status_lbl.config(text=text, fg=color)
+        self.status_lbl.config(text=self._t(text), fg=color)
         self.status_dot.config(fg=color)
 
     def _toggle_infinite(self):
@@ -853,6 +979,7 @@ class SecondMouse:
             "hotkey_rec": self.hotkey_rec, "hotkey_pause": self.hotkey_pause,
             "hotkey_play": self.hotkey_play, "hotkey_stop": self.hotkey_stop,
             "schedule_hour": self.schedule_hour.get(), "schedule_minute": self.schedule_minute.get(),
+            "language": self.language,
         }
         eng.save_config(cfg)
 
@@ -873,6 +1000,9 @@ class SecondMouse:
         self.hotkey_stop = cfg.get("hotkey_stop", self.hotkey_stop)
         self.schedule_hour.set(str(cfg.get("schedule_hour", "09")).zfill(2))
         self.schedule_minute.set(str(cfg.get("schedule_minute", "00")).zfill(2))
+        self.language = cfg.get("language", "繁體中文")
+        if self.language not in LANGUAGES:
+            self.language = "繁體中文"
 
     def _on_close(self):
         self._save_config()
